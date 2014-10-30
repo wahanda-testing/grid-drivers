@@ -19,7 +19,7 @@
 
 ###----- Steps to set-up full grid with android and ios support -----###
 
-1. Create an emulator if one doesn't exist and start and stop it
+1. Create an emulator if one doesn't exist then start and stop it
 ```android avd```
 
 2. Assuming you cloned in ~/projects navigate to ```cd ~/projects/grid-drivers/```
