@@ -5,7 +5,7 @@
 1. Create an emulator if one doesn't exist and start and stop it
 ```android avd```
 
-2. Assuming you cloned in ~/projecrs navigate to ~/projects/grid-drivers/
+2. Assuming you cloned in ~/projects navigate to ```cd ~/projects/grid-drivers/```
 
 3. Start selendroid server - See selendroid status at http://localhost:5555/wd/hub/status
 ```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app selendroid-test-app-0.12.0.apk -port 5555```
