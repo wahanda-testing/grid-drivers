@@ -25,7 +25,7 @@
 
 4. Start grid with selendroid and ios plug-in ```java -Dfile.encoding=UTF-8 -cp "ios-grid-plugin-0.6.6-SNAPSHOT.jar:selendroid-grid-plugin-0.12.0.jar:selenium-server-standalone-2.43.1.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4444```
 
-5. Register selendroid node ```curl -H "Content-Type: application/json" -X POST --data @selendroid-nodes-config.json http://localhost:4444/grid/register```
+5. Register selendroid node ```curl -H "Content-Type: application/json" -X POST --data @selendroid-nodes-config-both.json http://localhost:4444/grid/register```
 
 6. Start combined chrome, firefox and safari node ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.chrome.driver="chromedriver" -Dwebdriver.safari.driver="WebDriver.safariextz" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 10 -browser browserName=chrome,maxInstances=5,platform=MAC -browser browserName=safari,maxInstances=5,platform=MAC -browser browserName=firefox,maxInstances=5,platform=MAC -port 5556```
 
