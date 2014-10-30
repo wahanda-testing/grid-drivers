@@ -21,7 +21,7 @@
 
 1. Use the android sdk to create an emulator if one doesn't exist then start and stop it ```android avd```
 
-2. Start selendroid server - See selendroid status at http://localhost:5555/wd/hub/status ```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app selendroid-test-app-0.12.0.apk -port 5555```
+2. Start selendroid server - See selendroid status at http://localhost:5555/wd/hub/status ```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app wahanda-debug-v2.1.0.apk -port 5555```
 
 4. Start grid with selendroid and ios plug-in ```java -Dfile.encoding=UTF-8 -cp "ios-grid-plugin-0.6.6-SNAPSHOT.jar:selendroid-grid-plugin-0.12.0.jar:selenium-server-standalone-2.43.1.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4444```
 
