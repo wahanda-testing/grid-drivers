@@ -27,7 +27,7 @@
 
 5. Register selendroid node ```curl -H "Content-Type: application/json" -X POST --data @selendroid-nodes-config.json http://localhost:4444/grid/register```
 
-6. Start chrome, firefox and safari node ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.chrome.driver="chromedriver" -Dwebdriver.safari.driver="WebDriver.safariextz" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 10 -browser browserName=chrome,maxInstances=5,platform=MAC -browser browserName=safari,maxInstances=5,platform=MAC -browser browserName=firefox,maxInstances=5,platform=MAC -port 5556```
+6. Start combined chrome, firefox and safari node ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.chrome.driver="chromedriver" -Dwebdriver.safari.driver="WebDriver.safariextz" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 10 -browser browserName=chrome,maxInstances=5,platform=MAC -browser browserName=safari,maxInstances=5,platform=MAC -browser browserName=firefox,maxInstances=5,platform=MAC -port 5556```
 
 *WORK IN PROGRESS!!! 7. Start ios node ```java -jar ios-server-standalone-0.6.6-SNAPSHOT.jar -hub http://localhost:4444/grid/register -proxy org.uiautomation.ios.grid.IOSRemoteProxy -port 5557```*
 
