@@ -1,6 +1,23 @@
+###----- Steps to set-up simple grid -----###
+
+1. Assuming you cloned in ~/projects navigate to ```cd ~/projects/grid-drivers/```
+
+2. Start the grid ```java -jar selenium-server-standalone-2.43.1.jar -role hub -host 127.0.0.1 -port 4444```
+
+3. Check the grid status at ```http://localhost:4444/grid/console```
+
+4. Start a firefox node ```java -jar selenium-server-standalone-2.43.1.jar -role node -hub http://localhost:4444/grid/register -maxSession 5 -browser browserName=firefox,maxInstances=5,platform=MAC -port 5555```
+
+5. Check the node status at ```http://localhost:4444/grid/console```
+
+*Optional*
+
+6. Start a chrome node ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.chrome.driver="chromedriver" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 5 -browser browserName=chrome,maxInstances=5,platform=MAC -port 5556```
+
+7. Start a safari node (Requires developer certificate to install safari driver extension) ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.safari.driver="WebDriver.safariextz" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 5 -browser browserName=safari,maxInstances=5,platform=MAC -port 5557```
 
 
-###----- Steps to set-up full grid -----###
+###----- Steps to set-up full grid with android and ios support -----###
 
 1. Create an emulator if one doesn't exist and start and stop it
 ```android avd```
@@ -10,7 +27,7 @@
 3. Start selendroid server - See selendroid status at http://localhost:5555/wd/hub/status
 ```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app selendroid-test-app-0.12.0.apk -port 5555```
 
-4. Start grid with selendroid and ios plug-in - See grid status at http://localhost:4444/grid/console#
+4. Start grid with selendroid and ios plug-in - See grid status at http://localhost:4444/grid/console
 ```java -Dfile.encoding=UTF-8 -cp "ios-grid-plugin-0.6.6-SNAPSHOT.jar:selendroid-grid-plugin-0.12.0.jar:selenium-server-standalone-2.43.1.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4444```
 
 5. Register selendroid node
