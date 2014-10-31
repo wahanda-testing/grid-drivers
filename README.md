@@ -1,4 +1,4 @@
-###----- Steps to set-up simple grid -----###
+###----- Steps to set-up a simple local grid -----###
 
 1. Assuming you cloned in ~/projects navigate to
 ```cd ~/projects/grid-drivers/```
@@ -7,19 +7,15 @@
 ```java -jar selenium-server-standalone-2.43.1.jar -role hub -host 127.0.0.1 -port 4444```
 *See grid status at http://localhost:4444/grid/console#*
 
-4. In a different terminal window start a firefox node by running
+3. In a different terminal window start a firefox node by running
 ```java -jar selenium-server-standalone-2.43.1.jar -role node -hub http://localhost:4444/grid/register -maxSession 5 -browser browserName=firefox,maxInstances=5,platform=MAC -port 5555```
-
-5. Refresh
-```http://localhost:4444/grid/console```
-to check the node status.
 
 *Optional*
 
-6. Start a chrome node
+Start a chrome node
 ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.chrome.driver="chromedriver" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 5 -browser browserName=chrome,maxInstances=5,platform=MAC -port 5556```
 
-7. Start a safari node (Requires developer certificate to install safari driver extension)
+Start a safari node (Requires developer certificate to install safari driver extension)
 ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.safari.driver="WebDriver.safariextz" -hub http://localhost:4444/grid/register --no-sandbox -maxSession 5 -browser browserName=safari,maxInstances=5,platform=MAC -port 5557```
 
 
