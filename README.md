@@ -5,10 +5,7 @@
 
 2. In a terminal window start the grid by running
 ```java -jar selenium-server-standalone-2.43.1.jar -role hub -host 127.0.0.1 -port 4444```
-
-3. Check the grid status by browsing to
-```http://localhost:4444/grid/console```
-in your favourite browser.
+*See grid status at http://localhost:4444/grid/console#*
 
 4. In a different terminal window start a firefox node by running
 ```java -jar selenium-server-standalone-2.43.1.jar -role node -hub http://localhost:4444/grid/register -maxSession 5 -browser browserName=firefox,maxInstances=5,platform=MAC -port 5555```
