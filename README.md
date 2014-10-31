@@ -4,11 +4,11 @@
 ```cd ~/projects/grid-drivers/```
 
 2. In a terminal window start the grid by running
-```java -jar selenium-server-standalone-2.43.1.jar -role hub -host 127.0.0.1 -port 4444```
-*See grid status at http://localhost:4444/grid/console#*
+```java -jar selenium-server-standalone-2.43.1.jar -role hub -host 127.0.0.1 -port 4445```
+*See grid status at http://localhost:4445/grid/console#*
 
 3. In a different terminal window start a firefox node by running
-```java -jar selenium-server-standalone-2.43.1.jar -role node -hub http://localhost:4444/grid/register -maxSession 5 -browser browserName=firefox,maxInstances=5,platform=MAC -port 5555```
+```java -jar selenium-server-standalone-2.43.1.jar -role node -hub http://localhost:4445/grid/register -maxSession 5 -browser browserName=firefox,maxInstances=5,platform=MAC -port 5555```
 
 *Optional*
 
