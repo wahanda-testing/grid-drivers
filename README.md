@@ -32,7 +32,7 @@ Start a safari node (Requires developer certificate to install safari driver ext
 ```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app wahanda-debug-v2.1.0.apk -port 4444```
 *See selendroid status at http://localhost:4444/wd/hub/status*
 
-4. Start grid with selendroid and ios plug-in
+4. Start grid with selendroid plug-in
 ```java -Dfile.encoding=UTF-8 -cp "selendroid-grid-plugin-0.12.0.jar:selenium-server-standalone-2.43.1.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4445```
 *See grid status at http://localhost:4445/grid/console#*
 
