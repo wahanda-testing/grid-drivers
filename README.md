@@ -33,7 +33,7 @@ Start a safari node (Requires developer certificate to install safari driver ext
 *See selendroid status at http://localhost:4444/wd/hub/status*
 
 4. Start grid with selendroid and ios plug-in
-```java -Dfile.encoding=UTF-8 -cp "ios-grid-plugin-0.6.6-SNAPSHOT.jar:selendroid-grid-plugin-0.12.0.jar:selenium-server-standalone-2.43.1.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4445```
+```java -Dfile.encoding=UTF-8 -cp "selendroid-grid-plugin-0.12.0.jar:selenium-server-standalone-2.43.1.jar" org.openqa.grid.selenium.GridLauncher -capabilityMatcher io.selendroid.grid.SelendroidCapabilityMatcher -role hub -host 127.0.0.1 -port 4445```
 *See grid status at http://localhost:4445/grid/console#*
 
 5. Register selendroid node
