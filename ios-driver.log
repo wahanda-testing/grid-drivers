@@ -1,93 +1,30 @@
-15:20:644 INFO ApplicationStore.<init>  App archive folder:/Users/oliver/Desktop/drivers/applications
-15:20:681 FINE IOSServer.p  version:663b7cc0a7a48ff629b1bcb39bbd78aed1c1e560
-15:20:681 FINE IOSServer.p  Beta features enabled (enabled by -real flag): false
-15:20:682 FINE IOSServer.p  Simulator enabled : true
-15:20:682 FINE IOSServer.p  Inspector: http://0.0.0.0:5555/inspector/
-15:20:683 FINE IOSServer.p  Tests can access the server at http://0.0.0.0:5555/wd/hub
-15:20:683 FINE IOSServer.p  Server status: http://0.0.0.0:5555/wd/hub/status
-15:20:683 FINE IOSServer.p  Connected devices: http://0.0.0.0:5555/wd/hub/devices/all
-15:20:684 FINE IOSServer.p  Applications: http://0.0.0.0:5555/wd/hub/applications/all
-15:20:684 FINE IOSServer.p  Capabilities: http://0.0.0.0:5555/wd/hub/capabilities/all
-15:20:685 FINE IOSServer.p  Monitoring '/Users/oliver/Desktop/drivers/applications' for new applications
-15:20:685 FINE IOSServer.p  Archived apps: /Users/oliver/Desktop/drivers/applications
-15:20:685 FINE IOSServer.p  Build info: ios-driver 0.6.6-SNAPSHOT (built:20141009-1559,sha:663b7cc0a7a48ff629b1bcb39bbd78aed1c1e560)
-15:20:686 FINE IOSServer.p  Running on: Mac OS X 10.9.4 (x86_64)
-15:20:686 FINE IOSServer.p  Using java: 1.8.0_25
-15:20:686 FINE IOSServer.p  Using Xcode install: /Applications/Xcode.app
-15:20:687 FINE IOSServer.p  Using instruments: version:6.1, build: 56160
-15:20:687 FINE IOSServer.p  Using iOS version 8.1
-15:21:604 FINE IOSServer.p  iOS >= 6.0. Safari and hybrid apps are supported.
-15:21:604 FINE IOSServer.p  Applications :
-15:21:605 FINE IOSServer.p  	CFBundleName=Safari,CFBundleVersion=600.1.4,/Users/oliver/.ios-driver/safariCopies/safari-8.1.app
-15:45:206 SEVERE IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  ----------------------------------------------------------------------------
-15:45:207 SEVERE IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  
----------> R E A D   T H I S:
-couldn't delete MobileSafari app install dir: Unable to delete directory /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app.
-make sure ios-driver has read/write permissions to that folder by executing those 2 commands:
-	$ sudo chmod a+rw /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications
-	$ sudo chmod -R a+rw /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.appjava.io.IOException: Unable to delete directory /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app.
-	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1541)
-	at org.uiautomation.ios.setup.IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments(IOSSafariSimulatorManager.java:101)
-	at org.uiautomation.ios.setup.IOSSafariSimulatorManager.setup(IOSSafariSimulatorManager.java:52)
-	at org.uiautomation.ios.drivers.IOSDualDriver.start(IOSDualDriver.java:124)
-	at org.uiautomation.ios.ServerSideSession.start(ServerSideSession.java:305)
-	at org.uiautomation.ios.command.uiautomation.NewSessionNHandler.safeStart(NewSessionNHandler.java:97)
-	at org.uiautomation.ios.command.uiautomation.NewSessionNHandler.handle(NewSessionNHandler.java:55)
-	at org.uiautomation.ios.command.BaseCommandHandler.handleAndRunDecorators(BaseCommandHandler.java:110)
-	at org.uiautomation.ios.servlet.IOSServlet.getResponse(IOSServlet.java:158)
-	at org.uiautomation.ios.servlet.IOSServlet.process(IOSServlet.java:85)
-	at org.uiautomation.ios.servlet.IOSServlet.doPost(IOSServlet.java:60)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:755)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848)
-	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:501)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1086)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:428)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1020)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
-	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
-	at org.eclipse.jetty.server.Server.handle(Server.java:370)
-	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494)
-	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:982)
-	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1043)
-	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:865)
-	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
-	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
-	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:667)
-	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
-	at java.lang.Thread.run(Thread.java:745)
-
-15:45:210 SEVERE IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  ----------------------------------------------------------------------------
-15:45:214 WARNING NewSessionNHandler.safeStart  Error starting the session.
----------> R E A D   T H I S:
-couldn't delete MobileSafari app install dir: Unable to delete directory /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app.
-make sure ios-driver has read/write permissions to that folder by executing those 2 commands:
-	$ sudo chmod a+rw /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications
-	$ sudo chmod -R a+rw /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
+44:45:348 INFO ApplicationStore.<init>  App archive folder:/Users/oliver/projects/grid-drivers/applications
+44:45:383 FINE IOSServer.p  version:663b7cc0a7a48ff629b1bcb39bbd78aed1c1e560
+44:45:384 FINE IOSServer.p  Beta features enabled (enabled by -real flag): false
+44:45:384 FINE IOSServer.p  Simulator enabled : true
+44:45:384 FINE IOSServer.p  Inspector: http://0.0.0.0:5557/inspector/
+44:45:385 FINE IOSServer.p  Tests can access the server at http://0.0.0.0:5557/wd/hub
+44:45:385 FINE IOSServer.p  Server status: http://0.0.0.0:5557/wd/hub/status
+44:45:385 FINE IOSServer.p  Connected devices: http://0.0.0.0:5557/wd/hub/devices/all
+44:45:386 FINE IOSServer.p  Applications: http://0.0.0.0:5557/wd/hub/applications/all
+44:45:386 FINE IOSServer.p  Capabilities: http://0.0.0.0:5557/wd/hub/capabilities/all
+44:45:387 FINE IOSServer.p  Monitoring '/Users/oliver/projects/grid-drivers/applications' for new applications
+44:45:387 FINE IOSServer.p  Archived apps: /Users/oliver/projects/grid-drivers/applications
+44:45:388 FINE IOSServer.p  Build info: ios-driver 0.6.6-SNAPSHOT (built:20141009-1559,sha:663b7cc0a7a48ff629b1bcb39bbd78aed1c1e560)
+44:45:388 FINE IOSServer.p  Running on: Mac OS X 10.9.5 (x86_64)
+44:45:388 FINE IOSServer.p  Using java: 1.8.0_25
+44:45:389 FINE IOSServer.p  Using Xcode install: /Applications/Xcode.app
+44:45:389 FINE IOSServer.p  Using instruments: version:6.1, build: 56160
+44:45:389 FINE IOSServer.p  Using iOS version 8.1
+44:46:960 FINE IOSServer.p  iOS >= 6.0. Safari and hybrid apps are supported.
+44:46:960 FINE IOSServer.p  Applications :
+44:46:960 FINE IOSServer.p  	CFBundleName=Safari,CFBundleVersion=9537.53,/Users/oliver/.ios-driver/safariCopies/safari-7.1.app
+44:46:961 FINE IOSServer.p  	CFBundleName=Safari,CFBundleVersion=600.1.4,/Users/oliver/.ios-driver/safariCopies/safari-8.1.app
+44:58:820 INFO NewSessionNHandler.safeStart  The server cannot run Capabilities [{simulator=true, timeHack=false, language=en, locale=en_GB, deviceName=iPhone 5s, uuid=52C9E0DD-21D9-47EB-9C0B-D605DF7BCF3D, version=any, variation=Regular, platform=ANY, acceptSslCerts=true, browserName=Safari, sdkVersion=8.1, platformName=iOS, device=iphone, CFBundleName=Safari}] at the moment.{simulator=true, timeHack=false, language=en, locale=en_GB, deviceName=iPhone 5s, uuid=52C9E0DD-21D9-47EB-9C0B-D605DF7BCF3D, version=any, variation=Regular, platform=ANY, acceptSslCerts=true, browserName=Safari, sdkVersion=8.1, platformName=iOS, device=iphone, CFBundleName=Safari} no devices available.
+    Known devices: [Simulator[(sdks=[7.1, 8.1])available]]
 Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
-System info: host: 'host-198.gts.wahanda.com', ip: '172.16.1.198', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.8.0_25'
-Driver info: driver.version: IOSDualDriver
-15:45:320 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
-17:13:716 INFO IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  temporarily moving MobileSafari out of the install directory, if you need to restore it yourself use: $ cp -rf /Users/oliver/.ios-driver/safariCopies/MobileSafari-8.1.app /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
-17:14:725 WARNING NewSessionNHandler.safeStart  Error starting the session.null
-17:15:382 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
-17:49:000 INFO IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  temporarily moving MobileSafari out of the install directory, if you need to restore it yourself use: $ cp -rf /Users/oliver/.ios-driver/safariCopies/MobileSafari-8.1.app /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
-17:49:434 WARNING NewSessionNHandler.safeStart  Error starting the session.null
-17:50:760 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
-18:53:563 INFO IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  temporarily moving MobileSafari out of the install directory, if you need to restore it yourself use: $ cp -rf /Users/oliver/.ios-driver/safariCopies/MobileSafari-8.1.app /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
-18:53:998 WARNING NewSessionNHandler.safeStart  Error starting the session.null
-18:54:448 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
-20:12:495 INFO IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  temporarily moving MobileSafari out of the install directory, if you need to restore it yourself use: $ cp -rf /Users/oliver/.ios-driver/safariCopies/MobileSafari-8.1.app /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
-20:12:978 WARNING NewSessionNHandler.safeStart  Error starting the session.null
-20:13:633 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
-21:40:298 INFO IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  temporarily moving MobileSafari out of the install directory, if you need to restore it yourself use: $ cp -rf /Users/oliver/.ios-driver/safariCopies/MobileSafari-8.1.app /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
-21:40:740 WARNING NewSessionNHandler.safeStart  Error starting the session.null
-21:41:159 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
-23:05:603 INFO IOSSafariSimulatorManager.copySafariToAllowInstallByInstruments  temporarily moving MobileSafari out of the install directory, if you need to restore it yourself use: $ cp -rf /Users/oliver/.ios-driver/safariCopies/MobileSafari-8.1.app /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.1.sdk/Applications/MobileSafari.app
-23:05:794 WARNING NewSessionNHandler.safeStart  Error starting the session.null
-23:06:030 WARNING NewSessionNHandler.safeStart  app has crashed at startup :normal
+System info: host: 'host-198.gts.wahanda.com', ip: '172.16.1.198', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.5', java.version: '1.8.0_25'
+Driver info: driver.version: unknown
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'host-198.gts.wahanda.com', ip: '172.16.1.198', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.5', java.version: '1.8.0_25'
+Driver info: driver.version: unknown

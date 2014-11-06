@@ -1,0 +1,26 @@
+{
+  "capabilities":
+      [
+        {
+          "platformName": "iOS",
+          "platformVersion": "7.1",
+          "browserName": "Safari",
+          "deviceName": "iPhone Simulator",
+          "maxInstances": "5"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":2000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url":"http://localhost:4723/wd/hub",
+    "host": "localhost",
+    "port": 4723,
+    "maxSession": 1,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4445,
+    "hubHost": "localhost"
+  }
+}
