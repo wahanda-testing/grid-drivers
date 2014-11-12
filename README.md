@@ -21,14 +21,12 @@ Start a safari node (Requires developer certificate to install safari driver ext
 
 ###----- Steps to set-up full grid with android and ios support -----###
 
+Android mobile iOS support has changed recently so these steps only cover android app support.
+
 1. Use the android sdk to create an emulator if one doesn't exist then start and stop it
 ```android avd```
 
-2. Start selendroid server for web testing
-```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app wahanda-debug-v2.1.0.apk -port 5555```
-*See selendroid status at http://localhost:5555/wd/hub/status*
-
-3. Start selendroid server for app testing
+2. Start selendroid server for app testing
 ```java -jar selendroid-standalone-0.12.0-with-dependencies.jar -app wahanda-debug-v2.1.0.apk -port 4444```
 *See selendroid status at http://localhost:4444/wd/hub/status*
 
@@ -41,6 +39,4 @@ Start a safari node (Requires developer certificate to install safari driver ext
 
 6. Start combined chrome, firefox and safari node
 ```java -jar selenium-server-standalone-2.43.1.jar -role node -Dwebdriver.chrome.driver="chromedriver" -Dwebdriver.safari.driver="WebDriver.safariextz" -hub http://localhost:4445/grid/register --no-sandbox -maxSession 10 -browser browserName=chrome,maxInstances=5,platform=MAC -browser browserName=safari,maxInstances=5,platform=MAC -browser browserName=firefox,maxInstances=5,platform=MAC -port 5556```
-
-*WORK IN PROGRESS!!! 7. Start ios node ```java -jar ios-server-standalone-0.6.6-SNAPSHOT.jar -hub http://localhost:4444/grid/register -proxy org.uiautomation.ios.grid.IOSRemoteProxy -port 5557```*
 
