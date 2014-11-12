@@ -14,13 +14,6 @@
           "browserName": "Browser",
           "deviceName": "Android Emulator",
           "maxInstances": "5"
-        },
-        {
-          "platformName": "Android",
-          "platformVersion": "4.4.2",
-          "browserName": "Chrome",
-          "deviceName": "Android Emulator",
-          "maxInstances": "5"
         }
       ],
   "configuration":
