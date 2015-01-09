@@ -3,10 +3,10 @@
       [
         {
           "platformName": "iOS",
-          "platformVersion": "7.1",
+          "platformVersion": "8.1",
           "browserName": "Safari",
-          "deviceName": "iPhone Simulator",
-          "maxInstances": "5"
+          "deviceName": "iPhone 6",
+          "maxInstances": "1"
         },
         {
           "platformName": "Android",
