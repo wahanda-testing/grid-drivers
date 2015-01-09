@@ -13,6 +13,14 @@
           "platformVersion": "4.4.2",
           "browserName": "Browser",
           "deviceName": "Android Emulator",
+          "autoWebview": "true",
+          "maxInstances": "1"
+        },
+        {
+          "platformName": "Android",
+          "platformVersion": "4.4.2",
+          "deviceName": "Android Emulator",
+          "app": "/Users/oliver/Downloads/wahanda-debug-v2.1.0.apk",
           "maxInstances": "1"
         }
       ],
